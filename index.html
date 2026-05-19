@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareif Jones | Software Developer</title>
+    <link rel="icon" type="image/svg+xml" href="sj_favicon.svg">
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0f172a;;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #06b6d4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #67e8f9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h2 span {
+            color: #06b6d4;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(15, 23, 42, 0.98);
+            padding: 20px 0;
+            z-index: 100;
+            border-bottom: 1px solid #06b6d4;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .container {
+            max-width: 100%;
+            padding: 0 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #06b6d4;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav ul a {
+            color: #e5e5e5;
+            font-size: 0.95rem;
+        }
+
+        nav ul a:hover {
+            color: #06b6d4;
+        }
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-greeting {
+            color: #06b6d4;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        #hero h2 {
+            font-size: 2rem;
+            color: #888;
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: #06b6d4;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #0891b2;
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 1px solid #06b6d4;
+            color: #06b6d4;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: #06b6d4;
+            color: white;
+        }
+        #skills {
+            background-color: #0d1526;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .skill-card {
+            background-color: #1e293b;
+            border: 1px solid #06b6d433;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #e5e5e5;
+            transition: border-color 0.2s;
+        }
+
+        .skill-card:hover {
+            border-color: #06b6d4;
+            color: #67e8f9;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            background-color: #1e293b;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: #06b6d4;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-header h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .project-tag {
+            background-color: #06b6d422;
+            color: #67e8f9;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .project-card p {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tech span {
+            background-color: #0f172a;
+            color: #888;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .project-card a {
+            color: #06b6d4;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+        #about {
+            background-color: #0d1526;
+            text-align: center;
+        }
+
+        .about-inner p {
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        footer {
+            background-color: #0d1526;
+            padding: 24px 0;
+            text-align: center;
+            color: #444;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+
+    </style>
+</head>
+<body>
+        <nav>
+        <div class="container nav-inner">
+            <img src="shareif_jones_logo_segoe.svg" alt="Shareif Jones" style="height: 70px;">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+        <section id="hero">
+        <div class="container">
+            <p class="hero-greeting">Hi, my name is</p>
+            <h1>Shareif Jones</h1>
+            <h2>Tech Consultant & Software Developer</h2>
+            <p class="hero-description">From public health to enterprise IT to full-stack development — I build technology that actually works for the people using it.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+        <section id="skills">
+        <div class="container">
+            <h2>Skills & <span>Technologies</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Flask</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">React</div>
+                <div class="skill-card">HTML & CSS</div>
+                <div class="skill-card">Pandas</div>
+                <div class="skill-card">SQL</div>
+                <div class="skill-card">REST APIs</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">AWS</div>
+                <div class="skill-card">Claude AI API</div>
+                <div class="skill-card">Cybersecurity</div>
+            </div>
+        </div>
+    </section>
+        <section id="projects">
+        <div class="container">
+            <h2>Featured <span>Projects</span></h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Document Q&A App</h3>
+                        <span class="project-tag">AI</span>
+                    </div>
+                    <p>Upload any business document and ask questions about it in plain English. Powered by Claude AI.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>Claude API</span>
+                    </div>
+                    <a href="https://github.com/shareifjones/doc-qa-app" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Business Dashboard</h3>
+                        <span class="project-tag">Data</span>
+                    </div>
+                    <p>Interactive dashboard that visualizes business metrics — revenue, expenses, and customer growth from CSV data.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>Pandas</span><span>Matplotlib</span>
+                    </div>
+                    <a href="https://github.com/shareifjones/data-dashboard" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>File Integrity Monitor</h3>
+                        <span class="project-tag">Security</span>
+                    </div>
+                    <p>Cybersecurity tool that detects unauthorized file changes using SHA-256 cryptographic hashing.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Hashlib</span><span>JSON</span>
+                    </div>
+                    <a href="https://github.com/shareifjones/file-monitor" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Recipe App</h3>
+                        <span class="project-tag">Full Stack</span>
+                    </div>
+                    <p>Full-stack culinary platform where users can explore, create, and save recipes with authentication.</p>
+                    <div class="project-tech">
+                        <span>Django</span><span>PostgreSQL</span><span>AWS S3</span>
+                    </div>
+                    <a href="https://shareifs-recipes-7d2eed0a44fa.herokuapp.com/" target="_blank">View Live →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>myFlix</h3>
+                        <span class="project-tag">Full Stack</span>
+                    </div>
+                    <p>Full-stack movie management app with token-based authentication, user profiles, and a REST API backend.</p>
+                    <div class="project-tech">
+                        <span>React</span><span>Node.js</span><span>MongoDB</span>
+                    </div>
+                    <a href="https://shareif-flix.netlify.app/login" target="_blank">View Live →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+        <section id="about">
+        <div class="container about-inner">
+                <div>
+                <h2>About <span>Me</span></h2>
+                <p>I'm a software engineer and technology consultant based in New York, completing my M.S. in Software Engineering with an AI Engineering specialization at WGU. My background is unusual: I started in public health, spent years in IT consulting and enterprise system implementation, and developed full-stack engineering skills along the way.</p>
+                <br>
+                <p>I build web applications, data dashboards, and automation solutions — and I bring something most developers don't: I've worked directly with clients, end users, and stakeholders to understand what they actually need before writing a line of code.</p>
+                <br>
+                <p>Currently open to opportunities in tech consulting, software engineering, and implementation consulting.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container" style="text-align: center;">
+            <h2>Get In <span>Touch</span></h2>
+            <p style="color: #aaa; max-width: 500px; margin: 0 auto 40px;">I'm currently open to new opportunities. Whether you have a question or just want to connect, feel free to reach out.</p>
+            <div class="contact-links">
+                <a href="mailto:shareifjones@gmail.com" class="btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/shareif-jones/" target="_blank" class="btn-secondary">LinkedIn</a>
+                <a href="https://github.com/shareifjones" target="_blank" class="btn-secondary">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Shareif Jones</p>
+        </div>
+    </footer>
+
+</body>
+</html>
